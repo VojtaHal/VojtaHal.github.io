@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vojtech Halamek - Tennis Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        nav a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        
+        .header h1 {
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nickname {
+            font-size: 2rem;
+            font-style: italic;
+            color: #ffeb3b;
+            margin-bottom: 2rem;
+        }
+        
+        /* Profile Section */
+        .profile-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .profile-image {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-info {
+            padding: 1rem;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #ffeb3b;
+            border-bottom: 3px solid #ffeb3b;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .info-item {
+            font-size: 1.3rem;
+            margin: 1rem 0;
+            line-height: 1.8;
+        }
+        
+        .info-item strong {
+            color: #ffeb3b;
+        }
+        
+        .achievements {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+        
+        .achievement-item {
+            font-size: 1.2rem;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid #ffeb3b;
+            border-radius: 5px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+            }
+            
+            nav a {
+                font-size: 1rem;
+                padding: 0.4rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="videos.html">VIDEOS</a></li>
+            <li><a href="photos.html">PHOTOS</a></li>
+        </ul>
+    </nav>
+    
+    <div class="header">
+        <h1>VOJTECH HALAMEK</h1>
+        <div class="nickname">"Vojta"</div>
+    </div>
+    
+    <div class="profile-container">
+        <div>
+            <img src="images/vojta-profile.jpg" alt="Vojtech Halamek" class="profile-image">
+        </div>
+        
+        <div class="profile-info">
+            <h2 class="section-title">🎾 ABOUT ME</h2>
+            <div class="info-item"><strong>Born:</strong> July 18, 2008</div>
+            <div class="info-item"><strong>Height:</strong> 5'10"</div>
+            <div class="info-item"><strong>Weight:</strong> 190 lbs</div>
+            <div class="info-item"><strong>Experience:</strong> Playing tennis for 3 years</div>
+            
+            <div class="achievements">
+                <h2 class="section-title">🏆 ACHIEVEMENTS</h2>
+                <div class="achievement-item">2026 4A District - 3rd Place</div>
+                <div class="achievement-item">2025 4A District - 2nd Place</div>
+                <div class="achievement-item">2025 4A Regional Qualifier</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
